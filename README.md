@@ -1,3 +1,12 @@
+prochaine étapes:
+ - ajouter un bouton de deconnection dans la nav
+ - faire ensorte que quand je clique sur ajouter un article une page s'affiche sur la page déjà en encore d'utilisation et pas que ce soit une redirection
+ - faire en sorte que que l'admin puisse avoir le '' ajouter un article '' .
+ - travailler le style ainsi que les interaction utilisateurs
+
+
+
+
 # Mini-Blog-d-Actualit-s
 mettre en pratiques les choses apprise en cours.
 Objectifs

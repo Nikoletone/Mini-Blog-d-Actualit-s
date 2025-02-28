@@ -95,6 +95,7 @@ les technologie utliser:
 1. **Inscription** : Accédez à la page [`inscription.php`](inscription.php ) pour créer un nouveau compte utilisateur.
 2. **Connexion** : Accédez à la page [`connection.php`](connection.php ) pour vous connecter avec vos identifiants.
 3. **Accueil** : Une fois connecté, vous serez redirigé vers la page [`index.php`](index.php ) où vous pourrez consulter les articles.
+4. **Déconnexion** : Utilisez le formulaire de déconnexion sur la page d'accueil pour vous déconnecter.
 
 ## Structure du projet
 

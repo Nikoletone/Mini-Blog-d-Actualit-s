@@ -27,6 +27,7 @@ if ($user) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_index.css">
     <title>Accueil</title>
 </head>
 <body>
@@ -47,30 +48,36 @@ if ($user) {
      */
     require_once 'connection_BDD.php';
 
-    $requette_selection = $conn->prepare('SELECT * FROM articles');
+    $requette_selection = $conn->prepare('SELECT * FROM articles ORDER BY date_publication DESC, id DESC LIMIT 3; ');
     $requette_selection->execute();
     $requette_selection->setFetchMode(PDO::FETCH_OBJ);
     $listes_acticles = $requette_selection->fetchAll();
     ?>
-    <?php require_once 'header.php'; ?>
+    <header>
+        <?php require 'menu_burger.php'?>
+    </header>
     <main>
     <h1>Accueil</h1>
     <p>Bienvenue <?= $_SESSION['prenom']?> sur mon site</p>
     <br>
-
+    
+        <br>
     <ul>
         <h1>Articles</h1>
         <?php foreach($listes_acticles as $liste_article): ?>
             <li>
                 <h2><?= $liste_article->titre ?></h2>
-                <p><?= $liste_article->contenu ?></p>
+                <p><?= substr($liste_article->contenu, 0, 100) ?></p>
                 <p><?= $liste_article->categorie ?></p>
                 <p><?= $liste_article->date_publication ?></p>
                 <a href="article.php?id=<?= $liste_article->id ?>">Voir plus</a>
             </li>
         <?php endforeach; ?>
-    </ul>
+        </ul>
     </main>
-    <?php require_once 'footer.php'; ?>
+    <?php require_once 'footer.php';?>
+
 </body>
+
+
 </html>

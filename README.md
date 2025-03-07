@@ -1,46 +1,33 @@
 ## prochaine étapes:
- - ajouter un bouton de deconnection dans la nav
- - faire ensorte que quand je clique sur ajouter un article une page s'affiche sur la page déjà en encore d'utilisation et pas que ce soit une redirection
  - faire en sorte que que l'admin puisse avoir le '' ajouter un article '' .
- - travailler le style ainsi que les interaction utilisateurs
+ - continue travailler le style ainsi que les interaction utilisateurs 
 
 
 
 
-# Mini-Blog-d-Actualit-s
-mettre en pratiques les choses apprise en cours.
-Objectifs
-  -Créer et connecter une base de données MySQL avec PDO.
-  -Réaliser un formulaire de soumission d’articles (POST) avec validation.
-  -Afficher une liste dynamique d’articles depuis la base (GET) à l’aide de boucles.
-  -Implémenter la navigation entre une page d’affichage global et une page de détail d’article.
-  -(Optionnel) Utiliser des sessions pour simuler une connexion utilisateur et afficher un message personnalisé.
+# Mini Blog d’Actualités
 
+Ce projet est un mini blog d'actualités développé en PHP. Il permet aux utilisateurs de s'inscrire, de se connecter, de consulter des articles et de les ajouter.
 
-les technologie utliser:
-  -PHP
-  -MySQL
-  -HTML
-  -CSS
-  -JavaScript (je sais pas encore si je vais l'utiliser)
-  -Apache
-  -phpmyadmin
-  -VS Code
-  -Git 
+## Prérequis
 
+- PHP 7.4 ou supérieur
+- MySQL
+- Serveur web (Apache, Nginx, etc.)
+- Composer (optionnel)
 
-  ## Installation
+## Installation
 
 1. Clonez le dépôt sur votre machine locale :
 
     ```sh
-    git clone https://github.com/<votre-nom-utilisateur>/TD-Mini-Blog-d-Actualites.git
+    git clone https://github.com/Nikoletone/Mini-Blog-d-Actualit-s.git
     ```
 
 2. Accédez au répertoire du projet :
 
     ```sh
-    cd TD-Mini-Blog-d-Actualites
+    cd Mini-Blog-d-Actualit-s
     ```
 
 3. Configurez votre base de données MySQL :
@@ -95,7 +82,8 @@ les technologie utliser:
 1. **Inscription** : Accédez à la page [`inscription.php`](inscription.php ) pour créer un nouveau compte utilisateur.
 2. **Connexion** : Accédez à la page [`connection.php`](connection.php ) pour vous connecter avec vos identifiants.
 3. **Accueil** : Une fois connecté, vous serez redirigé vers la page [`index.php`](index.php ) où vous pourrez consulter les articles.
-4. **Déconnexion** : Utilisez le formulaire de déconnexion sur la page d'accueil pour vous déconnecter.
+4. **Ajouter un article** : Accédez à la page [`submit.php`](submit.php ) pour ajouter un nouvel article.
+5. **Déconnexion** : Utilisez le formulaire de déconnexion sur la page d'accueil pour vous déconnecter.
 
 ## Structure du projet
 
@@ -103,12 +91,17 @@ les technologie utliser:
 - [`inscription.php`](inscription.php ) : Page d'inscription pour les nouveaux utilisateurs.
 - [`connection.php`](connection.php ) : Page de connexion pour les utilisateurs existants.
 - [`article.php`](article.php ) : Page affichant le contenu d'un article spécifique.
+- [`submit.php`](submit.php ) : Page permettant d'ajouter un nouvel article.
 - [`connection_BDD.php`](connection_BDD.php ) : Fichier de configuration de la connexion à la base de données.
-- [`header.php`](header.php ) : En-tête du site.
-- [`footer.php`](footer.php ) : Pied de page du site.
+- [`menu_burger.php`](menu_burger.php ) : Fichier contenant le menu de navigation.
+- [`style_menu-burger.css`](style_menu-burger.css ) : Fichier CSS pour le style du menu de navigation.
+- [`test.js`](test.js ) : Fichier JavaScript pour ajouter des fonctionnalités interactives au menu de navigation.
 
 ## Contribuer
 
-Les contributions sont les bienvenues ! Veuillez soumettre une pull request pour toute amélioration ou correction de bug, comme je suis debutante je prend tout conseil et/ou subjection.
+Les contributions sont les bienvenues ! Veuillez soumettre une pull request pour toute amélioration ou correction de bug.
 
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
 

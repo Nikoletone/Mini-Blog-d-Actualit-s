@@ -36,6 +36,8 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
         exit();
     }
 }
+
+require_once 'menu_burger.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,16 +47,18 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     <title><?= $article->titre ?></title>
 </head>
 <body>
-    <div>
-        <h1><?= $article->titre?></h1>
-        <p><?= $article->contenu?></p>
-        <p><?= $article->categorie?></p>
-        <!-- ici on afiche la date de publication en jour moi et année  -->
-        <time datetime="<?= $article->date_publication?>">
-            Publié le <?= date('d/m/Y', strtotime($article->date_publication))?> 
-        </time>
-        <br>
-        <a href="index.php"> Revenir a l'Accueil</a>
-    </div>
+    <main>
+        <div>
+            <h1><?= $article->titre?></h1>
+            <p><?= $article->contenu?></p>
+            <p><?= $article->categorie?></p>
+            <!-- ici on afiche la date de publication en jour moi et année  -->
+            <time datetime="<?= $article->date_publication?>">
+                Publié le <?= date('d/m/Y', strtotime($article->date_publication))?> 
+            </time>
+            <br>
+            <a href="index.php"> Revenir a l'Accueil</a>
+        </div>
+    </main>
 </body>
 </html>

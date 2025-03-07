@@ -31,25 +31,39 @@ if (isset($_POST['Inscription'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
+    <link rel="stylesheet" href="style_inscription.css">
 </head>
 <body>
-    <form action="" method="post">
-        <fieldset>
+    
+        
+        <form action="" method="post">
             <legend>Inscription</legend>
-            <label for="nom">Nom</label>
-            <input type="text" name="nom" id="nom" required>
-            <br>
-            <label for="prenom">Prenom</label>
-            <input type="text" name="prenom" id="prenom" required>
-            <br>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-            <br>
-            <label for="mot_de_passe">Mot de passe</label>
-            <input type="password" name="mot_de_passe" id="mot_de_passe" required>
-            <br>
-            <input type="submit" value="Inscription" name="Inscription">
-        </fieldset>
-    </form>
+                <div>
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom" required class="inputs">
+                </div>
+                <br>
+                <div>
+                    <label for="prenom">Prenom</label>
+                    <input type="text" name="prenom" id="prenom" required class="inputs">
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required class="inputs">
+                </div>
+                <br>
+                <div>
+                    <label for="mot_de_passe">Mot de passe</label>
+                    <input type="password" name="mot_de_passe" id="mot_de_passe" required class="inputs">
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Inscription" name="Inscription" id="submit"> 
+                </div>
+                <p>Si vous etes déja incrit <a href="connection.php"> connecter vous </a></p>
+            
+        </form>
+   
 </body>
 </html>

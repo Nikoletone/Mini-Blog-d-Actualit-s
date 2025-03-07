@@ -51,29 +51,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
+    <link rel="stylesheet" href="style_co.css">
 </head>
 <body>
     <?php if ($error_message): ?>
-        <div style="color: red; padding: 10px; border: 1px solid red; margin: 10px;">
+        <div >
             <?= htmlspecialchars($error_message) ?>
         </div>
     <?php endif; ?>
-
+    
+        
     <form method="post" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>">
-        <div style="margin: 10px;">
-            <label for="email">Email :</label>
+      <legend>Connexion</legend> 
+       <div >
+            <label for="email">Email </label>
             <input type="email" id="email" name="email" required 
-                   value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+                   value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" class="inputs">
         </div>
         
-        <div style="margin: 10px;">
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password" required>
+        <div >
+            <label for="password">Mot de passe </label>
+            <input type="password" id="password" name="password" required class="inputs">
         </div>
 
-        <div style="margin: 10px;">
-            <input type="submit" value="Se connecter">
+        <div >
+            <input type="submit" value="Se connecter" id="submit">
         </div>
+        <p> Si vous avez pas déja un compte chez nous <a href="inscription.php"> incrivez vous</a></p>
     </form>
+    
 </body>
 </html>
